@@ -45,6 +45,8 @@ class JobController extends Controller
         $job->scoring_weights = json_encode($request->input('weights'));
         $job->save();
         
-        return redirect()->route('jobs.create')->with('Job saved successfully!');
+        return redirect()
+    ->route('jobs.create')
+    ->with('success', 'Job saved successfully!');
     }
 }

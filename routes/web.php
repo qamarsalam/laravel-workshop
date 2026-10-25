@@ -8,6 +8,8 @@ Route::get('/', function () {
     return redirect()->route('jobs.create');
 });
 
+//contact form routes
+
 
 Route::get('/jobs/create', [JobController::class, 'create'])->name('jobs.create');
 
